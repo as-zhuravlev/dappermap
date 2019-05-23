@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="createdb.pls" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="createdb.pls" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\DapperMap\DapperMap.csproj" />
+    <ProjectReference Include="..\LMS.Core\LMS.Core.csproj" />
+    <ProjectReference Include="..\LMS.Notifications.Email\LMS.Notifications.Email.csproj" />
+    <ProjectReference Include="..\LMS.Notifications.SMS\LMS.Notifications.SMS.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0" />
+    <PackageReference Include="Npgsql" Version="4.0.6" />
+  </ItemGroup>
+</Project>
